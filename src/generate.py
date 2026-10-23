@@ -1,14 +1,15 @@
 """Answer a question from retrieved legal text, with citations (local LLM via Ollama).
 Usage: python -m src.generate "your question"
 """
+import os
 import sys
 
 import httpx
 
 from src.hybrid import search_both
 
-OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL = "qwen2.5:7b"  # use "qwen2.5:3b" on an 8 GB Mac
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/chat")
+MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b")  # "qwen2.5:3b" on an 8 GB Mac
 
 SYSTEM = """You are a legal research assistant for two laws: the EU GDPR (English) \
 and Indonesia's Personal Data Protection Law, UU PDP (Indonesian).
@@ -31,8 +32,8 @@ def build_context(hits_by_doc: dict) -> str:
     return "\n\n".join(parts)
 
 
-def answer(question: str):
-    hits = search_both(question, k=8)
+def answer(question: str, method: str = "dense", k: int = 8):
+    hits = search_both(question, k=k, method=method)
     context = build_context(hits)
     resp = httpx.post(
         OLLAMA_URL,
