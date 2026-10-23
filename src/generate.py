@@ -32,7 +32,7 @@ def build_context(hits_by_doc: dict) -> str:
 
 
 def answer(question: str):
-    hits = search_both(question, k=5)
+    hits = search_both(question, k=8)
     context = build_context(hits)
     resp = httpx.post(
         OLLAMA_URL,
