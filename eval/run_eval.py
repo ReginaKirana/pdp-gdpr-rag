@@ -6,7 +6,6 @@ Usage:
 import json
 import sys
 from pathlib import Path
-from src.hybrid import normalize_query
 
 from src import hybrid
 
@@ -71,7 +70,7 @@ def main():
     for name, fn in CONFIGS.items():
         hits, rrs = 0, 0.0
         for item in QUESTIONS:
-            ranked = articles(fn(normalize_query(item["q"]), LANG[item["doc"]]))
+            ranked = articles(fn(item["q"], LANG[item["doc"]]))
             hit, rr = score(ranked, item["gold"])
             hits += hit
             rrs += rr

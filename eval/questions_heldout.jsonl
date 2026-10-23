@@ -1,0 +1,24 @@
+{"q": "Is a company required to keep a log of everything it does with customers' personal data?", "doc": "GDPR", "gold": [30]}
+{"q": "Can someone tell a company to stop using their details for direct marketing?", "doc": "GDPR", "gold": [21]}
+{"q": "If a person thinks the data held about them is wrong, what can they demand?", "doc": "GDPR", "gold": [16, 18]}
+{"q": "Are health data and biometric data handled differently from ordinary data?", "doc": "GDPR", "gold": [9]}
+{"q": "What must the contract between a controller and an outsourced service provider cover?", "doc": "GDPR", "gold": [28]}
+{"q": "Who pays compensation when someone is harmed by unlawful data handling?", "doc": "GDPR", "gold": [82]}
+{"q": "Does privacy have to be built into systems from the start?", "doc": "GDPR", "gold": [25]}
+{"q": "What must a company tell people when it collects their data directly from them?", "doc": "GDPR", "gold": [13]}
+{"q": "Can a person pause the use of their data while its accuracy is being checked?", "doc": "GDPR", "gold": [18]}
+{"q": "What general principles must all processing of personal data respect?", "doc": "GDPR", "gold": [5]}
+{"q": "Can an individual take a company to court for breaking data protection rights?", "doc": "GDPR", "gold": [79]}
+{"q": "Do companies outside the EU that serve EU customers need a local representative?", "doc": "GDPR", "gold": [27]}
+{"q": "Apakah perusahaan wajib mencatat seluruh aktivitas pemrosesan data pribadi?", "doc": "GDPR", "gold": [30]}
+{"q": "Siapa yang harus membayar ganti rugi jika data pribadi disalahgunakan?", "doc": "GDPR", "gold": [82]}
+{"q": "Apakah seseorang boleh menolak keputusan yang dibuat sepenuhnya oleh algoritma?", "doc": "GDPR", "gold": [22]}
+{"q": "Bagaimana aturan pemasangan CCTV di tempat umum?", "doc": "UU PDP", "gold": [17]}
+{"q": "Apa yang terjadi pada data pribadi ketika perusahaan melakukan merger?", "doc": "UU PDP", "gold": [48]}
+{"q": "Apakah memalsukan data pribadi dapat dipidana?", "doc": "UU PDP", "gold": [66]}
+{"q": "Apa kewajiban pengendali untuk merekam aktivitas pemrosesan data?", "doc": "UU PDP", "gold": [31]}
+{"q": "Apakah data pribadi penyandang disabilitas diperlakukan khusus?", "doc": "UU PDP", "gold": [26]}
+{"q": "Siapa yang berwenang menyelenggarakan pelindungan data pribadi?", "doc": "UU PDP", "gold": [58, 59, 60]}
+{"q": "Is it a crime to unlawfully collect someone else's personal data in Indonesia?", "doc": "UU PDP", "gold": [65, 67]}
+{"q": "Does a company in Indonesia have to keep personal data confidential?", "doc": "UU PDP", "gold": [36]}
+{"q": "What does the Indonesian law say about processing children's data?", "doc": "UU PDP", "gold": [25]}
