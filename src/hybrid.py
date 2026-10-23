@@ -58,6 +58,13 @@ def search(query: str, k: int = 5, lang: str | None = None, pool: int = 20):
     ranked = sorted(zip(candidates, scores), key=lambda x: x[1], reverse=True)[:k]
     return [(BY_ID[c], float(s)) for c, s in ranked]
 
+def search_both(query: str, k: int = 3):
+    """Top-k from each law separately; scores are not comparable across languages."""
+    return {
+        "GDPR": search(query, k=k, lang="en"),
+        "UU PDP": search(query, k=k, lang="id"),
+    }
+
 
 if __name__ == "__main__":
     q = sys.argv[1]
