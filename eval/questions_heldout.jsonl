@@ -15,7 +15,7 @@
 {"q": "Apakah seseorang boleh menolak keputusan yang dibuat sepenuhnya oleh algoritma?", "doc": "GDPR", "gold": [22]}
 {"q": "Bagaimana aturan pemasangan CCTV di tempat umum?", "doc": "UU PDP", "gold": [17]}
 {"q": "Apa yang terjadi pada data pribadi ketika perusahaan melakukan merger?", "doc": "UU PDP", "gold": [48]}
-{"q": "Apakah memalsukan data pribadi dapat dipidana?", "doc": "UU PDP", "gold": [66]}
+{"q": "Apakah memalsukan data pribadi dapat dipidana?", "doc": "UU PDP", "gold": [66, 68]}
 {"q": "Apa kewajiban pengendali untuk merekam aktivitas pemrosesan data?", "doc": "UU PDP", "gold": [31]}
 {"q": "Apakah data pribadi penyandang disabilitas diperlakukan khusus?", "doc": "UU PDP", "gold": [26]}
 {"q": "Siapa yang berwenang menyelenggarakan pelindungan data pribadi?", "doc": "UU PDP", "gold": [58, 59, 60]}
