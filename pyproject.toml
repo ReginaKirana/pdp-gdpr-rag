@@ -1,0 +1,26 @@
+[project]
+name = "pdp-gdpr-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Regina Sasikirana Farikh", email = "reginasasikiranaf8@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "gradio>=6.30.0",
+    "pymupdf>=2.0",
+    "python-dotenv>=1.2.4",
+    "qdrant-client>=1.20.0",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=6.2.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+pdp-gdpr-rag = "pdp_gdpr_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
