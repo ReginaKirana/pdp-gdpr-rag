@@ -53,8 +53,8 @@ All numbers come from scripts in `eval/` and can be reproduced. `recall@5` count
 | Configuration | recall@5 | MRR | latency / query |
 |---|---|---|---|
 | **Dense only (default)** | **1.000** | **0.917** | **~30 ms** |
-| Hybrid (dense + BM25, RRF) | 0.750 | 0.616 | TODO_MS |
-| Hybrid + reranker | 1.000 | 0.918 | ~2,000 ms |
+| Hybrid (dense + BM25, RRF) | 0.750 | 0.616 | ~25 ms |
+| Hybrid + reranker | 1.000 | 0.918 | ~1,850 ms |
 
 One gold label was corrected after error analysis (a question about penalties for forging personal data is answered by Pasal 68, not only the prohibition in Pasal 66).
 
@@ -71,7 +71,7 @@ One gold label was corrected after error analysis (a question about penalties fo
 
 ## What the evaluation showed
 
-- **Dense retrieval is enough here.** The cross-encoder reranker gives the same accuracy as dense search (MRR 0.918 vs 0.917) at roughly 50-60x the latency, and BM25 fusion hurt (recall 0.750). I kept dense retrieval as the default and left the other two as documented experiments.
+- **Dense retrieval is enough here.** The cross-encoder reranker gives the same accuracy as dense search (MRR 0.918 vs 0.917) at roughly 70x the latency, and BM25 fusion hurt (recall 0.750). I kept dense retrieval as the default and left the other two as documented experiments.
 - **BM25 seems to hurt most across languages.** A plausible cause is that an English query shares almost no tokens with Indonesian articles. This is a hypothesis; I did not test it in isolation.
 - **A law's name in the question is noise.** English questions containing "Indonesia's PDP Law" pulled in generic articles that mention Indonesia or the law itself. Stripping the phrase before retrieval fixed these failures on the tuning set (tuned on that set, so optimistic). A second occurrence of the same problem ("menurut UU PDP") appeared in the UI and was fixed the same way, plus routing: a question naming one law now searches only that law.
 - **Citation validity is not answer correctness.** All citations were valid, yet a manual read of 8 sampled answers found 4 with substantive problems: an incomplete list of GDPR principles, the same sub-paragraph letter reused for three different points, the prohibition article cited instead of the penalty article, and a muddled paraphrase of the CCTV rule. Retrieval is solid; answer quality is limited by the small local model.
@@ -91,7 +91,7 @@ One gold label was corrected after error analysis (a question about penalties fo
 **Prerequisites:** Docker Desktop, [Ollama](https://ollama.com) with `ollama pull qwen2.5:7b`, [uv](https://docs.astral.sh/uv/), Python 3.12.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/pdp-gdpr-rag.git
+git clone https://github.com/ReginaKirana/pdp-gdpr-rag.git
 cd pdp-gdpr-rag
 uv sync
 ```
