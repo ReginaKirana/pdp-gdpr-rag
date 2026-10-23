@@ -20,6 +20,20 @@ BY_ID = {c["id"]: c for c in CHUNKS}
 def tok(s: str):
     return re.findall(r"\w+", s.lower())
 
+_ID = re.compile(r"\b(?:Indonesia(?:'s|n)?\s+)?(?:PDP|Personal Data Protection)\s+Law\b", re.I)
+_EN = re.compile(r"\bGDPR\b|\bGeneral Data Protection Regulation\b", re.I)
+_IN_ID = re.compile(r"\s+(?:in|within)\s+Indonesia\b", re.I)
+
+
+def normalize_query(query: str) -> str:
+    """The language filter already selects the law, so its name is only noise
+    (it pulls in articles that mention 'Indonesia'). Leave GDPR and comparison
+    questions untouched."""
+    if _EN.search(query):
+        return query
+    q = _ID.sub("the law", query)
+    return _IN_ID.sub("", q)
+
 
 BM25 = BM25Okapi([tok(f"{c['label']} {c['text']}") for c in CHUNKS])
 _embedder = SentenceTransformer("BAAI/bge-m3", device=DEVICE)
@@ -51,7 +65,9 @@ def rrf(rankings, k: int = 60):
     return sorted(fused, key=fused.get, reverse=True)
 
 
+
 def search(query: str, k: int = 5, lang: str | None = None, pool: int = 20):
+    query = normalize_query(query)
     candidates = rrf([dense_ids(query, pool, lang), bm25_ids(query, pool, lang)])[:pool]
     pairs = [(query, f"{BY_ID[c]['label']}: {BY_ID[c]['text']}") for c in candidates]
     scores = _reranker.predict(pairs)

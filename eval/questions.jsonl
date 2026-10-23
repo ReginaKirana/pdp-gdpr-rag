@@ -1,0 +1,30 @@
+{"q": "Within what time must a controller notify a personal data breach to the supervisory authority?", "doc": "GDPR", "gold": [33]}
+{"q": "When must the controller tell the affected individuals about a data breach?", "doc": "GDPR", "gold": [34]}
+{"q": "What is the right to erasure ('right to be forgotten')?", "doc": "GDPR", "gold": [17]}
+{"q": "What information can a data subject obtain through the right of access?", "doc": "GDPR", "gold": [15]}
+{"q": "Can a data subject receive their data in a machine-readable format and transmit it to another controller?", "doc": "GDPR", "gold": [20]}
+{"q": "When must an organisation designate a data protection officer?", "doc": "GDPR", "gold": [37]}
+{"q": "What are the legal bases for lawful processing of personal data?", "doc": "GDPR", "gold": [6]}
+{"q": "What conditions must consent meet to be valid?", "doc": "GDPR", "gold": [7]}
+{"q": "What are the maximum administrative fines for infringements?", "doc": "GDPR", "gold": [83]}
+{"q": "When is a data protection impact assessment required?", "doc": "GDPR", "gold": [35]}
+{"q": "Under what conditions can personal data be transferred to a third country?", "doc": "GDPR", "gold": [44, 45, 46]}
+{"q": "At what age can a child consent to online services?", "doc": "GDPR", "gold": [8]}
+{"q": "Which security measures must controllers and processors implement?", "doc": "GDPR", "gold": [32]}
+{"q": "Can a person object to decisions based solely on automated processing, including profiling?", "doc": "GDPR", "gold": [22]}
+{"q": "Who has the right to lodge a complaint with a supervisory authority?", "doc": "GDPR", "gold": [77]}
+{"q": "Dalam berapa lama pengendali wajib memberitahukan kegagalan pelindungan data pribadi?", "doc": "UU PDP", "gold": [46]}
+{"q": "Apa saja hak subjek data pribadi?", "doc": "UU PDP", "gold": [5, 6, 7, 8, 9, 10, 11, 12, 13]}
+{"q": "Apa dasar pemrosesan data pribadi yang sah?", "doc": "UU PDP", "gold": [20]}
+{"q": "Kapan pengendali wajib menunjuk pejabat pelaksana fungsi pelindungan data pribadi?", "doc": "UU PDP", "gold": [53]}
+{"q": "Bagaimana ketentuan transfer data pribadi ke luar wilayah Indonesia?", "doc": "UU PDP", "gold": [56]}
+{"q": "Apa sanksi administratif atas pelanggaran pelindungan data pribadi?", "doc": "UU PDP", "gold": [57]}
+{"q": "Bagaimana pemrosesan data pribadi anak?", "doc": "UU PDP", "gold": [25]}
+{"q": "Kapan wajib dilakukan penilaian dampak pelindungan data pribadi?", "doc": "UU PDP", "gold": [34]}
+{"q": "Apa larangan penggunaan data pribadi yang bukan miliknya?", "doc": "UU PDP", "gold": [65]}
+{"q": "When must a controller notify a data breach under Indonesia's PDP Law?", "doc": "UU PDP", "gold": [46]}
+{"q": "What rights does a data subject have under Indonesia's PDP Law?", "doc": "UU PDP", "gold": [5, 6, 7, 8, 9, 10, 11, 12, 13]}
+{"q": "What are the legal grounds for processing personal data in Indonesia?", "doc": "UU PDP", "gold": [20]}
+{"q": "How are cross-border data transfers regulated in Indonesia's PDP Law?", "doc": "UU PDP", "gold": [56]}
+{"q": "What administrative sanctions exist under Indonesia's PDP Law?", "doc": "UU PDP", "gold": [57]}
+{"q": "Does Indonesia's PDP Law require a data protection officer?", "doc": "UU PDP", "gold": [53]}
