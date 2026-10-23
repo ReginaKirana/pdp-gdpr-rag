@@ -17,6 +17,7 @@ Rules:
 - Answer ONLY from the context passages. Never use outside knowledge.
 - Always answer in English, even when a passage is in Indonesian.
 - Cite every claim like [GDPR Article 33] or [UU PDP Pasal 46].
+- When the question asks for a list (rights, obligations, requirements), cover every relevant item in the passages, not just one.
 - If the passages do not contain the answer, reply exactly: "I could not find this in the provided texts." Do not guess.
 - If a question involves both laws, cover each law separately, then summarize differences.
 - You are not a lawyer; do not give legal advice."""
@@ -31,7 +32,7 @@ def build_context(hits_by_doc: dict) -> str:
 
 
 def answer(question: str):
-    hits = search_both(question, k=3)
+    hits = search_both(question, k=5)
     context = build_context(hits)
     resp = httpx.post(
         OLLAMA_URL,
